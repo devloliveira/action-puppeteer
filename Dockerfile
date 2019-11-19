@@ -36,5 +36,7 @@ RUN npm i request
 # Run everything after as non-privileged user.
 USER pptruser
 
-CMD ["google-chrome-unstable"]
+COPY entrypoint.sh /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
 
